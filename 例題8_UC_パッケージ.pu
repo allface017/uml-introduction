@@ -4,10 +4,18 @@ package 学生
 package 先生
 package Java応用ゼミ
 
-選択授業 -[dashed]-> 学生
+選択授業 -[plain]-> 学生
 選択授業 -[bold]-> 先生
-学生 -[dashed]-> Java応用ゼミ
-先生 -[dashed]-> Java応用ゼミ
+学生 -[plain]-> Java応用ゼミ
+先生 -[dotted]-> Java応用ゼミ
 
-
+' パッケージを作成する際の線種
+' 線種を変更する場合には -- の間に [bold] のように線種を指定する
+' 例えば太字の場合は -[bold]-> となる。
+' 記述線種
+' [bold]太字
+' [dashed]広い破線
+' [dotted]細かい破線
+' [hidden]描画なし
+' [plain]通常の線
 @enduml
