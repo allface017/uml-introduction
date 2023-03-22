@@ -1,0 +1,25 @@
+@startuml 例題3
+left to right direction
+actor 申請者 as user #DDDDDD;line:black;line.bold;
+actor 承認者 as admin #DDDDDD;line:black;line.bold;
+actor 経理担当者 as par #DDDDDD;line:black;line.bold;
+actor 交通費精算システム as sisu #DDDDDD;line:black;line.bold;
+
+rectangle 主張申請システム {
+usecase 出張申請を登録する as A
+usecase 出張申請を提出する as B
+usecase 出張申請を認証する as C
+usecase 出張申請を却下する as D
+usecase 出張申請を差し戻す as E
+usecase 出張申請を確認する as F
+}
+
+user --> A
+user --> B
+admin --> C
+admin --> D
+admin --> E
+par --> E
+par --> F 
+A <-- sisu
+@enduml
