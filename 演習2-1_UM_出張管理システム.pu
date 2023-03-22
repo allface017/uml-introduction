@@ -8,7 +8,7 @@ actor 交通費精算システム as sisu #DDDDDD;line:black;line.bold;
 rectangle 主張申請システム {
 usecase 出張申請を登録する as A
 usecase 出張申請を提出する as B
-usecase 出張申請を認証する as C
+usecase 出張申請を承認する as C
 usecase 出張申請を却下する as D
 usecase 出張申請を差し戻す as E
 usecase 出張申請を確認する as F
