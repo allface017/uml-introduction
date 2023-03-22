@@ -19,7 +19,7 @@ user --> B
 admin --> C
 admin --> D
 admin --> E
-par --> E
+admin --> F
 par --> F 
 A <-- sisu
 @enduml
