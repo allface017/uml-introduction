@@ -5,17 +5,17 @@ actor 人事担当者 as you #DDDDDD;line:black;line.bold;
 actor 社員 as Say #DDDDDD;line:black;line.bold;
 
 rectangle 従業員登録システム {
+usecase 社員情報を変更する as D
 usecase 社員情報を登録する as A
 usecase 社員情報を参照する as B
-usecase 社員情報を変更する as D
 
 
 }
 
 
+Say --> B
 you -->  A 
 you --> D
-Say --> B
 
 
 @enduml
