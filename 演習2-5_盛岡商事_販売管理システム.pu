@@ -1,13 +1,7 @@
 @startuml 例題3
 left to right direction
-package 盛岡商事{
-    package 販売部{
-        package 商品の出荷{
-actor 田中さん as tana #DDDDDD;line:black;line.bold;
-actor 鈴木さん as suzu #DDDDDD;line:black;line.bold;
-        }
-}
-    }
+
+actor 出荷担当者 as you #DDDDDD;line:black;line.bold;
 
 rectangle 販売システム {
 usecase 注文商品を確認する as A
@@ -16,6 +10,7 @@ usecase 商品の出荷状況を登録する as B
 }
 
 
-tana -->  A  
-suzu --> B
+you -->  A 
+you --> B 
+
 @enduml
