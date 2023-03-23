@@ -3,7 +3,7 @@ left to right direction
 
 actor 出荷担当者 as you #DDDDDD;line:black;line.bold;
 
-rectangle 販売システム {
+rectangle 販売管理システム {
 usecase 注文商品を確認する as A
 usecase 商品の出荷状況を登録する as B
 
