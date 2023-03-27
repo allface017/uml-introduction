@@ -1,0 +1,29 @@
+@startuml 演習2-8
+left to right direction
+
+actor 利用者 as you #DDDDDD;line:black;line.bold;
+actor 従業員 as cus #DDDDDD;line:black;line.bold;
+actor 管理者 as mas #DDDDDD;line:black;line.bold;
+
+rectangle 従業員登録システム {
+usecase 空室状況を閲覧する as A
+usecase (部屋を<U>予約</u>する\n宿泊費はキャンペーン価格になります\nキャンペーン期間) as B
+usecase 会員登録する as D
+usecase 空室状況を入力する as E
+usecase キャンペーン as F
+usecase 予約を集計する as G
+usecase ログインする as H
+}
+    B   ..> H : << include >>
+    E   ..> H : << include >>
+    G   ..> H : << include >>
+    (F) ..> B: << extend>>
+    you --> A
+    D --> B
+    you --> D 
+    cus --> E
+    mas --> G
+
+
+
+@enduml
