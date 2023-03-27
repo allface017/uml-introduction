@@ -22,8 +22,8 @@ usecase ログインする as H
     D --> B
     you --> D 
     cus --> E
-    mas --> G
-
+    cus --> G
+    cus <|-- mas
 
 
 @enduml
