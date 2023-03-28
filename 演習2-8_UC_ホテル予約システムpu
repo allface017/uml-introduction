@@ -22,7 +22,7 @@ usecase ログインする as H
     D --> B
     you --> D 
     cus --> E
-    cus --> G
+    mas --> G
     cus <|-- mas
 
 
