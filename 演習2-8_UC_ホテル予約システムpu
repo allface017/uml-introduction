@@ -19,7 +19,7 @@ usecase ログインする as H
     G   ..> H : << include >>
     (F) ..> B: << extend>>
     you --> A
-    D --> B
+    D ..> B : << extend>>
     you --> D 
     cus --> E
     mas --> G
