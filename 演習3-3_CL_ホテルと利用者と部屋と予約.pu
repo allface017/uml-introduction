@@ -20,7 +20,7 @@ class "予約" as Yoyaku {
     -滞在時間
     -値段
 }
-
+custmer "*" -ri-o "1" hoteru
 custmer "1" --o "*" Yoyaku
 hoteru "1" o-- "*" Heya
 Yoyaku "1" -ri- "*" Heya
