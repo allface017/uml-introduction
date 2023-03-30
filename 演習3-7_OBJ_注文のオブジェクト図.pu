@@ -1,0 +1,46 @@
+@startuml
+
+left to right direction
+
+object "重要顧客" as SSS {
+    氏名：高橋洋平
+}
+object "顧客"  as SS{
+    氏名:高田理恵
+}
+
+object "注文1" as T1{
+    注文日:11月21日
+    数量:2台
+}
+
+object "注文2" as T2{
+    注文日:11月21日
+    数量:1台
+}
+
+object "注文3" as T3{
+    注文日:12月23日
+    数量:1台
+}
+
+object "商品1" as S1 {
+    商品名:テレビ
+    型式:V12345
+}
+object "商品2" as S2{
+    商品名:冷蔵庫
+    型式:R8765
+}
+' object "商品3" as S3{
+'     商品名:プロジェクタ
+'     型式:P1122
+' }
+SSS -- T1
+SSS -- T2
+SS -- T3
+
+T1 -- S1
+T2 -- S2
+T3 -- S1
+@enduml
