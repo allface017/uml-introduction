@@ -1,4 +1,6 @@
 @startuml ホテルオブジェクト図
+
+
 left to right direction
 
 object "<u>ホテルUML</u>" as Hote {
@@ -32,6 +34,6 @@ object "<u>部屋情報3: 客室303号室</u>" as H3 {
 H1 -- Hote
 H2 -- Hote
 H3 -- Hote
-' Hote -- C1
-' Hote -- C2
+Hote -- C1
+Hote -- C2
 @enduml
