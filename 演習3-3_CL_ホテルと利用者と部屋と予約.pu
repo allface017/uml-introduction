@@ -1,5 +1,4 @@
-@startuml
-
+@startuml クラス図
 class "利用者" as custmer {
     -名前
     -住所

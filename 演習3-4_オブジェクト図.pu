@@ -1,4 +1,4 @@
-@startuml
+@startuml オブジェクト図
 
 object "車" as K {
     タイヤ[4]
