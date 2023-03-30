@@ -1,0 +1,27 @@
+@startuml 資格取得
+
+left to right direction
+
+object "社員1:" as TY {
+    氏名：高橋洋平
+}
+
+object "社員2:" as HY {
+    氏名：樋口正之
+}
+
+object "資格1" as S1 {
+    名称:情報処理安全確保支援士
+}
+
+object "資格2" as S2 {
+    名称:LinuC試験Level1
+}
+
+
+
+TY -- S1
+HY -- S1
+TY -- S2
+
+@enduml
