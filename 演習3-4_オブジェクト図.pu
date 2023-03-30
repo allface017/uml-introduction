@@ -1,0 +1,13 @@
+@startuml
+
+object "車" as K {
+    タイヤ[4]
+}
+
+object "タイヤ" as T {
+
+}
+
+K *-- T
+
+@enduml

@@ -1,0 +1,11 @@
+@startuml
+class "車" as car {
+-タイヤ[4]
+}
+class "タイヤ" as T {
+---
+}
+
+car "1" *-- "4" T
+
+@enduml

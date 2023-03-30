@@ -1,0 +1,18 @@
+@startuml
+class "従業員" as Z {
+---
+}
+class "派遣" as H{
+---
+}
+class "契約社員" as K{
+---
+}
+
+class "正社員" as S{
+    ---
+}
+Z <|-down- H
+Z <|-down- K
+Z <|-down- S
+@enduml

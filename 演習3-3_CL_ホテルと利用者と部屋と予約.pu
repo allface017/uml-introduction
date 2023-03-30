@@ -1,0 +1,29 @@
+@startuml
+
+class "利用者" as custmer {
+    -名前
+    -住所
+    -電話番号
+}
+
+class "ホテル" as hoteru {
+    -部屋
+}
+
+class "部屋" as Heya {
+    -タイプ
+    -価格
+    - キャンペーン価格
+}
+
+class "予約" as Yoyaku {
+    -チェックイン日
+    -滞在時間
+    -値段
+}
+
+custmer "1" --o "*" Yoyaku
+hoteru "1" o-- "*" Heya
+Yoyaku "1" -ri- "*" Heya
+@enduml
+

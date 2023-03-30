@@ -1,0 +1,24 @@
+@startuml 医局図
+' left to right direction
+class "医師" as IC {
+-名前
+-所属医局
+-担当科
+}
+class "患者" as K {
+    -名前
+
+}
+
+class "診察記録" as AN {
+    -患者名
+}
+class "医局" as EK {
+    -医局名
+}
+
+K "1" -ri- "1" AN
+K "*" -down- "1" IC
+IC "*" -down- "1" EK
+
+@enduml
