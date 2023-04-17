@@ -1,0 +1,20 @@
+@startuml
+
+hide footbox
+participant ":客" as custmer
+participant ":フロア店員" as buyyer 
+participant "料理人" as cooker 
+mainframe sd ラーメン屋さん
+    activate custmer
+    custmer-> buyyer : ラーメンを注文する
+        activate buyyer
+            activate cooker
+            buyyer -> cooker : 調理を指示する
+            cooker -> cooker : 調理する
+            buyyer <<-- cooker : ラーメン
+            custmer <<-- buyyer : ラーメン
+            deactivate cooker
+        deactivate buyyer
+    deactivate custmer    
+
+@enduml

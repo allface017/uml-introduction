@@ -1,0 +1,36 @@
+@startuml
+
+hide footbox
+Actor ":受付係" as desk
+participant ":注文登録画面" as boundary <<boundary>>
+participant ":商品" as entity2  << entity >>
+participant ":注文" as entity1 << entity >>
+
+
+
+    activate desk
+    desk->boundary: 商品情報確認()
+
+    activate boundary
+        activate entity2
+        boundary ->> entity2: 商品情報取得()
+        entity2-->>boundary: 商品情報
+            deactivate entity2
+
+            boundary->boundary: 商品情報表示(商品情報)
+            activate boundary
+            deactivate boundary
+            deactivate boundary
+
+     
+        desk ->boundary:商品登録(注文情報)
+        deactivate desk
+        activate boundary
+        deactivate boundary
+        create entity1
+        boundary -->> entity1: 商品登録() << created >> 
+        activate entity1 
+        deactivate entity1
+
+
+@enduml

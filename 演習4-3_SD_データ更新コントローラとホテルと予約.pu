@@ -1,0 +1,15 @@
+@startuml
+
+hide footbox
+participant ":データ更新コントロール" as control << control >>
+participant ":ホテル" as hotel << hotel >>
+participant ":予約" as yoyaku
+
+control -> hotel: 予約する()
+activate control
+activate hotel
+create yoyaku
+hotel-> yoyaku :<< create >>
+hotel->hotel: 予約登録()
+ 
+@enduml

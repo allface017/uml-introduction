@@ -1,0 +1,36 @@
+@startuml
+
+hide footbox
+Actor ":ユーザー" as user
+participant ":ブラウザ" as burauza 
+participant ":webサーバー" as entity1 
+participant ":画像サーバー" as entity2  
+
+
+    activate user
+    user -> burauza: リンクボタンを押す
+
+    activate burauza
+        burauza ->> entity1: 画像ファイル名を渡す
+        activate entity1
+
+
+        entity1 -> entity2: 画像ファイル名を探す命令を渡す
+        
+        activate entity2
+    entity2 -> entity2 :画像ファイルを探す
+            entity1 <<-- entity2:画像ファイル
+        deactivate entity2
+
+      
+            burauza <<-- entity1:HTMLと画像ファイル
+            deactivate entity1
+            
+        user <<-- burauza:画像の閲覧
+
+        deactivate burauza
+
+
+
+
+@enduml
