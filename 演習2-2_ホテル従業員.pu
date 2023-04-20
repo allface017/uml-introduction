@@ -1,8 +1,8 @@
 @startuml ユースケース図
-left to right direction
+'left to right direction
 
 actor 経営者 as host
 actor ホテル従業員 as you
 
-you <|-[dashed]-- host  
+you <|-[dashed] host  
 @enduml
