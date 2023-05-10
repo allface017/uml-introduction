@@ -1,0 +1,24 @@
+' @startuml
+' state 自動車で通勤中{
+' state entry <<entryPoint>>
+' state exit <<exitPoint>>
+' entry -> 停止中
+' 停止中-down-> 運転中
+' 運転中-up-> 停止中
+' 停止中-right-> exit
+' }
+' [*] --> entry
+' exit -> [*]
+' @enduml
+
+@startuml
+state fork_state <<fork>>
+[*] --> fork_state
+fork_state --> State2
+fork_state --> State3
+state join_state <<join>>
+State2 --> join_state
+State3 --> join_state
+join_state --> State4
+State4 --> [*]
+@enduml
