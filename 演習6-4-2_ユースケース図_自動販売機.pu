@@ -4,7 +4,7 @@ left to right direction
 skinparam actorStyle stereotype
 skinparam packageStyle rectangle
 
-actor "客ユーザー" as Client
+actor "客" as Client
 actor "ベンダー" as Vendor
 
 rectangle "自動販売機" {
