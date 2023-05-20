@@ -1,0 +1,25 @@
+@startuml ユースケース図
+
+left to right direction
+skinparam actorStyle stereotype
+skinparam packageStyle rectangle
+
+actor "客ユーザー" as Client
+actor "ベンダー" as Vendor
+
+rectangle "自動販売機" {
+    usecase "お金を料金装置に入れる" as Money
+    usecase "ボタンを押す" as Button
+    usecase "ドリンクを受け取る" as Drink
+    usecase "ドリンクの補充" as Drinkrel
+    usecase "料金回収" as Value
+    
+    Client --> Money
+    Client --> Button
+    Button --> Drink: << include >>
+    Money --> Drink: << include >>
+    Vendor --> Drinkrel 
+    Vendor -->  Value 
+}
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml シーケンス図
+
+hide footbox
+actor 客 as Customer
+participant ボタン as button
+participant 料金装置 as ryoukin
+participant ベンダー装置 as bender
+
+mainframe sd 自販機
+
+activate Customer
+    Customer -> ryoukin: お金を挿入
+    activate ryoukin
+    Customer -> button: ボタンを押す
+    activate button
+    button -> ryoukin:料金の受取を確認
+deactivate button
+    ryoukin -> bender: ドリンクの準備開始
+deactivate ryoukin
+    activate bender
+    
+    
+bender -> Customer: ドリンクを提供
+deactivate bender
+deactivate Customer
+
+@enduml
+
