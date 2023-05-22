@@ -1,0 +1,21 @@
+@startuml ステートマシン図
+
+
+
+state 自販機{
+state entry <<entryPoint>>
+state exit <<exitPoint>>
+
+entry --> 料金投入待ち
+
+料金投入待ち --> ボタン選択待ち : 金額投入完了[お金を入れる]  
+
+ボタン選択待ち --> ドリンク排出中 : ボタン選択完了[ボタンを押す]
+
+
+ドリンク排出中 -right-> exit : ドリンク排出完了
+}
+
+[*] --> entry
+exit -> [*]: ドリンク受け取り完了
+@enduml
