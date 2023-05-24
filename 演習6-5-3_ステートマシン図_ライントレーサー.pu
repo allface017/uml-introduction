@@ -1,0 +1,18 @@
+@startuml ステートマシン図
+' left to right direction
+
+[*] -right>電源SWOFF
+
+
+  電源SWOFF -up> 電源SWON : 電源SWをONにする
+state 電源SWON {
+
+  [*] --> 右旋回 : 光センサーが黒いライン上にある
+  右旋回 -> 左旋回 : 光センサーがラインを外れる
+  左旋回 -> 右旋回 : 光センサーが黒いライン上にある
+  電源SWON --> 電源SWOFF : 電源SWをOFFにする
+}
+
+電源SWOFF ->[*]
+
+@enduml

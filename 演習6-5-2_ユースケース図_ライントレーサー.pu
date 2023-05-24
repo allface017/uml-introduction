@@ -1,0 +1,47 @@
+@startuml ユースケース図
+left to right direction
+actor User as User
+' actor "ライトトレーサー" as RT
+actor "光センサー" as S
+' actor "左モータ" as LM
+' actor "右モータ" as RM
+' actor CPU as C
+' actor "電源SW" as PS
+
+rectangle ライトトレーサー {
+    usecase 右旋回を始める as RS
+    usecase 左旋回を始める as LS
+    usecase 暗さを感知 as darke
+    usecase 明るさを感知 as light
+    usecase 右モータON as Ron
+    usecase 左モータON as Lon
+    usecase 右モータOFF as Roff
+    usecase 左モータOFF as Loff
+    usecase 電源を入れる as PSon
+    usecase 電源を切る as PSoff
+    usecase システム起動 as Con
+    usecase システム停止 as Coff
+    }
+S --> darke
+
+S --> light
+
+darke --> Roff
+darke --> Lon
+
+light --> Ron
+light --> Loff
+
+User --> PSon
+User --> PSoff
+PSon <. Con: << include >>
+PSoff <. Coff: << include >>
+
+RS .> Roff:<< include >>
+RS .> Lon: << include >>
+
+LS .> Ron: << include >>
+LS .> Loff: << include >>
+
+
+@enduml
