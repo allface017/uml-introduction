@@ -5,20 +5,23 @@ class "医師" as IC {
 -所属医局
 -担当科
 }
-class "患者" as K {
-    -名前
 
+class "患者" as K {
+-名前
 }
 
 class "診察記録" as AN {
-    -患者名
+-患者名
+-担当医師名
 }
+
 class "医局" as EK {
-    -医局名
+-医局名
 }
 
 K "1" -ri- "1" AN
 K "*" -down- "1" IC
-IC "*" -down- "1" EK
+IC "*" -down- "1..*" EK
+IC "1" -down- "0..*" AN
 
 @enduml
