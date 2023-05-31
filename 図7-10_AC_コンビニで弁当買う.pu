@@ -27,6 +27,6 @@ endif
 end fork
 |店員|
 |客|
-:弁当を手に持つ;
+:弁当を手にもつ;
 stop
 @enduml
