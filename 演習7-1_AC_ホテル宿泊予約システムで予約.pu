@@ -1,10 +1,16 @@
-@startuml ループ処理
-title ホテルの予約
+@startuml ホテル予約システム
+title ホテル予約
 start
-:アクティビティA;
-repeat
-:アクティビティB;
-repeat while (i < 10) -> [No]
-:アクティビティC;
+:ユーザ名入力;
+:パスワード入力;
+if (認証成功？) then (yes)
+  :予約処理;
+else (no)
+  repeat
+    :ユーザ名再入力;
+    :パスワード再入力;
+  repeat while (認証成功？) -> [No]
+  :予約処理;
+endif
 stop
 @enduml
