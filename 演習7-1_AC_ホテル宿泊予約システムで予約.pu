@@ -1,0 +1,10 @@
+@startuml ループ処理
+title ホテルの予約
+start
+:アクティビティA;
+repeat
+:アクティビティB;
+repeat while (i < 10) -> [No]
+:アクティビティC;
+stop
+@enduml
